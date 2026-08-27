@@ -1,26 +1,25 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "xemu",
   "description": "Original Xbox emulator.",
   "version": "0.8.136",
-  "image": "ghcr.io/containerpak/xemu:main",
-  "binaries": ["/usr/bin/xemu"],
-  "desktop_entries": ["/usr/share/applications/app.xemu.xemu.desktop"],
+  "image": "ghcr.io/containerpak/xemu@sha256:d0c3a5e3a36ce67fe44d5731aa012517fef2923f0befd9abc833d7c80cebbfaa",
+  "binaries": [
+    "/usr/bin/xemu"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/app.xemu.xemu.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": true,
@@ -32,7 +31,12 @@
     "deviceAll": false,
     "notification": true,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -40,8 +44,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
-
