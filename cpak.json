@@ -4,7 +4,7 @@
   "name": "xemu",
   "description": "Original Xbox emulator.",
   "version": "0.8.136",
-  "image": "ghcr.io/containerpak/xemu@sha256:fd1177ea203200c4837ec98ae7f9f0246d0e88e06848e96b934bfe5338518171",
+  "image": "ghcr.io/containerpak/xemu@sha256:d97f07cabe5d822c9685a09cfdeb0cbe810d7b9b643b5380e3b0bd46e0c9582f",
   "binaries": [
     "/usr/bin/xemu"
   ],
